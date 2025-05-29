@@ -6,7 +6,7 @@ const getHeaderLi = document.querySelectorAll('li');
 getHeaderLi.forEach((li) => {
   const span = document.createElement('span');
 
-  span.textContent = li.firstChild.textContent.trim();
+  span.textContent = li.childNodes[0].textContent;
   li.firstChild.replaceWith(span);
 
   span.addEventListener('click', () => {
